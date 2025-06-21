@@ -37,41 +37,51 @@ This project provides a systematic comparison of various pre-trained language mo
 
 ## 🛠 Technologies Used
 
-- **Python 3.8+**
+- **Google Colab** - Cloud-based Jupyter environment with free GPU
+- **Python 3.10+** - Programming language (pre-installed in Colab)
 - **PyTorch 2.2.2** - Deep learning framework
 - **Transformers 4.42.1** - Hugging Face model library
-- **TensorFlow** - Additional ML framework support
 - **SentencePiece** - Text tokenization
-- **NumPy 1.26** - Numerical computations
-- **Jupyter Notebook** - Interactive development environment
+- **TorchText 0.17.2** - Text processing utilities
+- **NumPy 1.26** - Numerical computations (downgraded for compatibility)
 
-## 📦 Installation
+## 📦 Installation & Setup
 
 ### Prerequisites
-- Python 3.8 or higher
-- CUDA-compatible GPU (recommended for better performance)
-- 8GB+ RAM
+- Google Account (for Google Colab access)
+- Stable internet connection
+- Modern web browser
 
 ### Setup Instructions
 
+#### Option 1: Google Colab (Recommended)
+1. **Open in Colab:**
+   - Click [here](https://colab.research.google.com/github/Net-AI-Git/LLMs-01---comparison/blob/main/model_comparison.ipynb) to open directly in Colab
+   - Or upload the `model_comparison.ipynb` file to your Google Drive and open with Colab
+
+2. **Runtime Setup:**
+   ```python
+   # The notebook automatically installs required packages:
+   # !pip install transformers==4.42.1 sentencepiece torch==2.2.2 torchtext==0.17.2
+   ```
+
+3. **GPU Acceleration (Optional but Recommended):**
+   - Go to Runtime → Change runtime type
+   - Select "GPU" under Hardware accelerator
+
+#### Option 2: Local Jupyter Environment
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/Net-AI-Git/LLMs-01---comparison.git
 cd LLMs-01---comparison
 ```
 
-2. **Create a virtual environment:**
+2. **Install dependencies:**
 ```bash
-python -m venv llm_comparison_env
-source llm_comparison_env/bin/activate  # On Windows: llm_comparison_env\Scripts\activate
+pip install torch==2.2.2 transformers==4.42.1 sentencepiece torchtext==0.17.2 jupyter
 ```
 
-3. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Launch Jupyter Notebook:**
+3. **Launch Jupyter Notebook:**
 ```bash
 jupyter notebook model_comparison.ipynb
 ```
@@ -80,10 +90,11 @@ jupyter notebook model_comparison.ipynb
 
 ### Running the Comparison
 
-1. **Open the Jupyter Notebook** and execute all cells in order
-2. **Model Loading**: The notebook will automatically download and load all models (this may take several minutes on first run)
-3. **Start Interactive Chat**: Run the final cell to begin the chat interface
-4. **Multi-Model Interaction**: Type your questions and see responses from all models simultaneously
+1. **Open the Google Colab Notebook** and run all cells in order
+2. **Automatic Setup**: The notebook will automatically install all required packages
+3. **Model Loading**: The system will download and load all models (this may take 5-10 minutes on first run)
+4. **Start Interactive Chat**: Run the final cell to begin the chat interface
+5. **Multi-Model Interaction**: Type your questions and see responses from all models simultaneously
 
 ### Example Interaction
 
@@ -110,14 +121,15 @@ Chatbots: Goodbye!
 ```
 LLMs-01---comparison/
 │
-├── model_comparison.ipynb    # Main notebook with comparison implementation
-├── requirements.txt          # Python dependencies
+├── model_comparison.ipynb    # Main Colab notebook with comparison implementation
 ├── README.md                # Project documentation
 ├── results/                 # [TO ADD] Screenshots and analysis results
 │   ├── chat_examples/       # [TO ADD] Example conversations
 │   └── performance_metrics/ # [TO ADD] Model performance data
 └── docs/                    # [TO ADD] Additional documentation
 ```
+
+**Note:** This is a Google Colab project - all dependencies are installed directly within the notebook using `!pip install` commands.
 
 ## 🔬 Models Compared
 
@@ -138,11 +150,8 @@ LLMs-01---comparison/
 
 ## 📊 Results
 
-<!-- [TO ADD] Insert screenshots of chat interactions here -->
-*📸 Add screenshot: `results/chat_examples/example_conversation_1.png`*
+![image](https://github.com/user-attachments/assets/8bdfe3fa-0475-408c-9a55-3414c6244781)
 
-<!-- [TO ADD] Insert performance comparison charts here -->
-*📈 Add chart: `results/performance_metrics/response_quality_comparison.png`*
 
 ### Key Observations
 
