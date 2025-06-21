@@ -134,7 +134,7 @@ Chatbots: Goodbye!
 LLMs-01---comparison/
 │
 ├── model_comparison.ipynb    # Main Colab notebook with comparison implementation
-├── README.md                # Project documentation
+└── README.md                # Project documentation
 ```
 
 **Note:** This is a Google Colab project - all dependencies are installed directly within the notebook using `!pip install` commands.
@@ -157,17 +157,26 @@ LLMs-01---comparison/
 - **FLAN-T5 (google/flan-t5-base & small)**: Instruction-tuned for various NLP tasks
 
 ## 📊 Results
-
-![image](https://github.com/user-attachments/assets/c6cf634e-91b8-4a02-8a85-eabd2b62ed46)
-
+![image](https://github.com/user-attachments/assets/373d7006-4753-4598-8ba6-ac635d2106a6)
 
 ### Key Observations
 
-**[TO ADD - After running experiments, document:]**
-- Response quality patterns for different question types
-- Model-specific strengths and weaknesses
-- Performance metrics (response time, coherence, relevance)
-- Behavioral differences in conversational scenarios
+**Model-Specific Behaviors:**
+- **BlenderBot**: Maintains conversational tone but often provides imprecise factual information
+- **NLLB**: Consistently translates input to Amharic (Ethiopian language) instead of answering directly  
+- **BART-base**: Frequently echoes the input question without generating new content
+- **FLAN-T5-base**: Provides short, direct answers with varying accuracy
+- **FLAN-T5-small**: Similar to T5-base but sometimes more concise
+
+**Response Patterns by Question Type:**
+- **Factual Questions**: T5 models attempt direct answers, BlenderBot shows uncertainty
+- **Complex/Ethical Questions**: T5 models provide simple responses, BlenderBot acknowledges complexity
+- **Translation Behavior**: NLLB demonstrates its multilingual nature by auto-translating
+
+**Technical Performance:**
+- All models load successfully in Colab environment
+- Response generation is fast across all models
+- Clear differentiation in model specializations and limitations
 
 ## 🔮 Future Work
 
