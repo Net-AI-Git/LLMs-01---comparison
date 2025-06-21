@@ -135,10 +135,6 @@ LLMs-01---comparison/
 │
 ├── model_comparison.ipynb    # Main Colab notebook with comparison implementation
 ├── README.md                # Project documentation
-├── results/                 # [TO ADD] Screenshots and analysis results
-│   ├── chat_examples/       # [TO ADD] Example conversations
-│   └── performance_metrics/ # [TO ADD] Model performance data
-└── docs/                    # [TO ADD] Additional documentation
 ```
 
 **Note:** This is a Google Colab project - all dependencies are installed directly within the notebook using `!pip install` commands.
