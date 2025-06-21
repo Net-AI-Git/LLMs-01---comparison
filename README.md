@@ -96,16 +96,28 @@ jupyter notebook model_comparison.ipynb
 4. **Start Interactive Chat**: Run the final cell to begin the chat interface
 5. **Multi-Model Interaction**: Type your questions and see responses from all models simultaneously
 
-### Example Interaction
+### Example Interactions
 
+**Simple Factual Query:**
 ```python
-You: What is the biggest city in the world?
+You: what is the largest city in the world by area?
 
-blenderbot: I'm not sure, but it's the most populous metropolitan area in the United States.
-nllb: ¿Cuál es la ciudad más grande del mundo?
-bart-base: what is the biggest city in the world?
+blenderbot: I'm not sure, but it is the most populous metropolitan area in the United States.
+nllb: በስፋት በዓለም ላይ ትልቁ ከተማ ምንድነው?
+bart-base: what is the largest city in the world by area?
 t5-base: san marino
 t5-small: san francisco
+```
+
+**Complex Ethical Question:**
+```python
+You: if artificial intelligence surpasses human intelligence in all domains, who should be held morally accountable for its actions?
+
+blenderbot: I'm not sure, but I do know that there is a lot of controversy surrounding it.
+nllb: ሰው ሰራሽ የማሰብ ችሎታ በሁሉም ዘርፍ ከሰው ልጅ የማሰብ ችሎታ በላይ ከሆነ ለድርጊቱ በሥነ ምግባር ተጠያቂው ማን ነው?
+bart-base: if artificial intelligence surpasses human intelligence in all domains, who should be held morally accountable for its actions?
+t5-base: human
+t5-small: a human
 
 You: bye
 Chatbots: Goodbye!
@@ -150,7 +162,7 @@ LLMs-01---comparison/
 
 ## 📊 Results
 
-![image](https://github.com/user-attachments/assets/8bdfe3fa-0475-408c-9a55-3414c6244781)
+![image](https://github.com/user-attachments/assets/c6cf634e-91b8-4a02-8a85-eabd2b62ed46)
 
 
 ### Key Observations
